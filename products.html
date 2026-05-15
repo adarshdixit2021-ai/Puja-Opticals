@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Eyewear - Puja Opticals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fas fa-glasses"></i>
+            <h1>Puja <span>Opticals</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="frame-guide.html">Frame Guide</a></li>
+                <li><a href="appointment.html">Eye Test</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/919555860408" class="wa-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Order Now
+        </a>
+    </header>
+
+    <!-- ===== SHOP HEADER ===== -->
+    <section class="shop-header">
+        <h2>Our Collection</h2>
+        <p>Browse our premium selection of eyewear</p>
+    </section>
+
+    <!-- ===== FILTERS & PRODUCTS ===== -->
+    <section class="shop-container">
+        
+        <!-- Sidebar Filters -->
+        <aside class="filters">
+            <h3><i class="fas fa-filter"></i> Filters</h3>
+            
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox" class="filter-cat" value="sunglasses"> Sunglasses</label>
+                <label><input type="checkbox" class="filter-cat" value="eyeglasses"> Eyeglasses</label>
+                <label><input type="checkbox" class="filter-cat" value="contact"> Contact Lenses</label>
+                <label><input type="checkbox" class="filter-cat" value="kids"> Kids Eyewear</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Gender</h4>
+                <label><input type="checkbox" class="filter-gender" value="men"> Men</label>
+                <label><input type="checkbox" class="filter-gender" value="women"> Women</label>
+                <label><input type="checkbox" class="filter-gender" value="unisex"> Unisex</label>
+                <label><input type="checkbox" class="filter-gender" value="kids"> Kids</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Color</h4>
+                <label><input type="checkbox" class="filter-color" value="black"> Black</label>
+                <label><input type="checkbox" class="filter-color" value="brown"> Brown</label>
+                <label><input type="checkbox" class="filter-color" value="gold"> Gold</label>
+                <label><input type="checkbox" class="filter-color" value="silver"> Silver</label>
+                <label><input type="checkbox" class="filter-color" value="blue"> Blue</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <label><input type="radio" name="price" class="filter-price" value="0-1000"> Under ₹1,000</label>
+                <label><input type="radio" name="price" class="filter-price" value="1000-3000"> ₹1,000 - ₹3,000</label>
+                <label><input type="radio" name="price" class="filter-price" value="3000-5000"> ₹3,000 - ₹5,000</label>
+                <label><input type="radio" name="price" class="filter-price" value="5000-99999"> Above ₹5,000</label>
+                <label><input type="radio" name="price" class="filter-price" value="all" checked> All Prices</label>
+            </div>
+
+            <button class="clear-btn" onclick="clearFilters()">Clear All Filters</button>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="product-section">
+            <div class="sort-bar">
+                <p id="result-count">Loading products...</p>
+                <select id="sort" onchange="sortProducts()">
+                    <option value="default">Sort: Featured</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                </select>
+            </div>
+            <div id="product-grid" class="product-grid">
+                <!-- Products loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 Puja Opticals | Mohanlalganj, Lucknow | WhatsApp: +91 95558 60408</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919555860408" class="floating-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

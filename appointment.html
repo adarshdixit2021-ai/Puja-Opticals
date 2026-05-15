@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Eye Test - Puja Opticals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fas fa-glasses"></i>
+            <h1>Puja <span>Opticals</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="frame-guide.html">Frame Guide</a></li>
+                <li><a href="appointment.html" class="active">Eye Test</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/919555860408" class="wa-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Order Now
+        </a>
+    </header>
+
+    <section class="appointment-section">
+        <div class="appointment-info">
+            <h2>Book Your <span>Eye Test</span></h2>
+            <p>Professional eye examination by qualified optometrist. <strong>FREE</strong> with any frame purchase!</p>
+            
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Visit Us</h4>
+                    <p>Puja Opticals, Mohanlalganj, Lucknow, UP</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Timing</h4>
+                    <p>Monday - Sunday: 10:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <h4>WhatsApp Booking</h4>
+                    <p>+91 95558 60408</p>
+                </div>
+            </div>
+        </div>
+
+        <form id="appointmentForm" class="appointment-form" onsubmit="bookAppointment(event)">
+            <h3>Fill the Form</h3>
+            
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="name" required placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="phone" required pattern="[0-9]{10}" placeholder="10 digit mobile number">
+            </div>
+            
+            <div class="form-group">
+                <label>Preferred Date *</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Preferred Time *</label>
+                <select id="time" required>
+                    <option value="">Select a slot</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="01:00 PM">01:00 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="04:00 PM">04:00 PM</option>
+                    <option value="05:00 PM">05:00 PM</option>
+                    <option value="06:00 PM">06:00 PM</option>
+                    <option value="07:00 PM">07:00 PM</option>
+                    <option value="08:00 PM">08:00 PM</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Service Type *</label>
+                <select id="service" required>
+                    <option value="">Select service</option>
+                    <option value="Eye Test (Power Check)">Eye Test (Power Check)</option>
+                    <option value="Frame Consultation">Frame Consultation</option>
+                    <option value="Contact Lens Fitting">Contact Lens Fitting</option>
+                    <option value="Lens Replacement">Lens Replacement</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Message (Optional)</label>
+                <textarea id="message" rows="3" placeholder="Any specific requirement..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <i class="fab fa-whatsapp"></i> Book on WhatsApp
+            </button>
+            
+            <p class="form-note">* Your booking will be confirmed via WhatsApp</p>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 Puja Opticals | Mohanlalganj, Lucknow | WhatsApp: +91 95558 60408</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919555860408" class="floating-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/appointment.js"></script>
+</body>
+</html>
